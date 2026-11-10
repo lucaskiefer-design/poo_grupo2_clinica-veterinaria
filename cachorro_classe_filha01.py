@@ -10,4 +10,7 @@ class Cachorro:
     def __str__(self):
         return f"{self.nome} (tutor: {self.nome_dono})"
 
+    def emitir_som(self):
+        return "Au Au!!"
+
 cachorro01 = Cachorro("", "Fêmea", 12, 9, "Vinícius Über", "Golden Retriever")
