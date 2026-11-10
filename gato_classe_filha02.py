@@ -1,6 +1,6 @@
 ## GATO
 
-from animal import Animal
+from animal_classe_base import Animal
 
 class Gato:
     def __init__(self, nome, sexo, idade, peso, nome_dono, cor):

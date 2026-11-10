@@ -14,3 +14,4 @@ class Animal:
 
     def emitir_som(self):
         pass
+        return f"{self.nome} (especie: {self.especie})"
