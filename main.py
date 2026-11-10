@@ -1,7 +1,5 @@
 ## --- MAIN ---
 """Programa Principal - Menu Interativo Simplificado."""
-<<<<<<< HEAD
-=======
 
 from clinica_classe_gerenciadora import Clinica       #Classe Gerenciadora
 from animal_classe_base import Animal                 #Classe Base
@@ -42,7 +40,6 @@ def main():
                 print("Nenhum animal cadastrado.")
             for a in animais:
                 print(a)
->>>>>>> 1a97743 (Ajustes)
 
 from clinica_classe_gerenciadora import Clinica       #Classe Gerenciadora
 from animal_classe_base import Animal         #Classe Base

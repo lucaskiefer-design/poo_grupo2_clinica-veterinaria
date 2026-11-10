@@ -18,6 +18,7 @@ class Animal:
         pass
         return f"{self.nome} (especie: {self.especie})"
         pass
+
 #Método (polimorfismo)
     def emitir_som(self):
         pass
