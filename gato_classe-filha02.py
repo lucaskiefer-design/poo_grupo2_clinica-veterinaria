@@ -7,4 +7,7 @@ class Gato:
         super().__init__(nome, sexo, idade, peso, nome_dono)
         self.cor = cor
 
+    def __str__(self):
+        return f"{self.nome} (tutor: {self.nome_dono})"
+
 gato01 = Gato("Bob", "Macho", 8, 6, "Yara Borges", "Laranja")

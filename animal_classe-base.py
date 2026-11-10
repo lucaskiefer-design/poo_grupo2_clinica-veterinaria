@@ -9,3 +9,5 @@ class Animal:
         self.peso = peso
         self.nome_dono = nome_dono
 
+    def __str__(self):
+        return f"{self.nome} (especie: {self.especie})"
