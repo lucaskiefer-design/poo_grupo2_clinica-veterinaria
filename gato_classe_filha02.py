@@ -10,4 +10,7 @@ class Gato:
     def __str__(self):
         return f"{self.nome} (tutor: {self.nome_dono})"
 
+    def emitir_som(self):
+        return "Miau Miau!"
+
 gato01 = Gato("Bob", "Macho", 8, 6, "Yara Borges", "Laranja")

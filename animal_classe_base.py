@@ -11,3 +11,6 @@ class Animal:
 
     def __str__(self):
         return f"{self.nome} (especie: {self.especie})"
+
+    def emitir_som(self):
+        pass
