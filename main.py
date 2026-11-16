@@ -8,6 +8,21 @@ from gato_classe_filha02 import Gato                  #Classe Filha
 
 def main():
     clinica = Clinica("Pet Feliz")
+# MAIN.PY
+
+# Importação das classes utilizadas no sistema
+from clinica_classe_gerenciadora import Clinica
+from cachorro_classe_filha01 import Cachorro
+from gato_classe_filha02 import Gato
+
+# Função principal do programa
+def main():
+
+    # Criação de uma instância da clínica veterinária
+    clinica = Clinica(
+        "Pet Feliz",
+        "Rua 25 de Julho, Jaraguá do Sul"
+    )
 
     while True:
         print("\n--- CLÍNICA VETERINÁRIA ---")
@@ -100,3 +115,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+# Chamada da função principal
+main()

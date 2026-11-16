@@ -1,9 +1,13 @@
 ## GATO
 
+#Classe filha -- Gato
+
+# Importa a classe base Animal
 from animal_classe_base import Animal
 
-# Classe Filha
 class Gato(Animal):
+    # Método construtor
+    # Recebe os dados do gato e chama o construtor da classe Animal
     def __init__(self, nome, sexo, idade, peso, nome_dono, cor):
         super().__init__(nome, sexo, idade, peso, nome_dono)
         self.cor = cor  # Atributo próprio
@@ -20,11 +24,13 @@ class Gato(Animal):
 
     @cor.setter
     def cor(self, valor):
+        # Validação para impedir que a cor fique vazia
         if valor.strip() == "":
             raise ValueError("A cor não pode ser vazia.")
         self.__cor = valor
 
     # Método str
+    # Exibe as informações do gato
     def __str__(self):
         return (
             f"Nome: {self.nome} | "
@@ -58,3 +64,9 @@ gato01 = Gato(
     "Yara Borges",
     "Laranja"
 )
+
+
+# Testes dos métodos da classe
+print(gato01)
+print(gato01.emitir_som())
+print(gato01.arranhar())

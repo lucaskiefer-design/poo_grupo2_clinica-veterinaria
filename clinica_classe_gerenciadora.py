@@ -1,3 +1,5 @@
+#Classe Gerenciadora -- Clínica
+
 class Clinica:
     def __init__(self, nome, endereco):
         self.nome = nome
@@ -14,6 +16,7 @@ class Clinica:
 
     @nome.setter
     def nome(self, valor):
+        # Validação para impedir nome vazio
         if valor.strip() == "":
             raise ValueError("O nome da clínica não pode ser vazio.")
         self.__nome = valor
@@ -25,6 +28,7 @@ class Clinica:
 
     @endereco.setter
     def endereco(self, valor):
+        # Validação para impedir endereço vazio
         if valor.strip() == "":
             raise ValueError("O endereço não pode ser vazio.")
         self.__endereco = valor
@@ -37,4 +41,11 @@ class Clinica:
 clinica01 = Clinica(
     "Clínica do Jorge",
     "Rua 25 de Julho, Vila Nova, Jaraguá do Sul"
+<<<<<<< HEAD
 )
+=======
+)
+# Exibe os dados da clínica utilizando
+# o método especial __str__()
+print(clinica01)
+>>>>>>> 91f6ebb (Implementação dos comentários)

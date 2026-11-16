@@ -1,4 +1,4 @@
-# Classe Base
+# Classe Base -- Animal
 class Animal:
     def __init__(self, nome, sexo, especie, idade, peso, nome_dono):
         self.nome = nome
@@ -23,6 +23,7 @@ class Animal:
 
     @nome.setter
     def nome(self, valor):
+        # Validação para impedir que o nome fique vazio
         if valor.strip() == "":
             raise ValueError("O nome não pode ser vazio.")
         self.__nome = valor
@@ -95,3 +96,6 @@ class Animal:
     # Método para polimorfismo
     def emitir_som(self):
         pass
+        raise NotImplementedError(
+            "Este método deve ser implementado pelas classes filhas."
+        )
