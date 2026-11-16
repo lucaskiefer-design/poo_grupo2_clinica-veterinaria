@@ -2,6 +2,7 @@
 
 from animal_classe_base import Animal
 
+#Classe Filha
 class Cachorro:
     def __init__(self, nome, sexo, idade, peso, nome_dono, raca):
         super().__init__(nome, sexo, idade, peso, nome_dono)

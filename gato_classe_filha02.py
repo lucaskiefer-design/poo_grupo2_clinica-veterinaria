@@ -3,10 +3,14 @@
 from animal_classe_base import Animal
 
 
+#Classe Filha
 class Gato(Animal):
     def __init__(self, nome, sexo, idade, peso, nome_dono, cor):
         super().__init__(nome, sexo, idade, peso, nome_dono)
         self.cor = cor  # Atributo próprio
+
+    def __str__(self):
+        return f"{self.nome} (tutor: {self.nome_dono})"
 
     # Método próprio
     def arranhar(self):
