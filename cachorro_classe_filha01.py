@@ -2,17 +2,44 @@
 
 from animal_classe_base import Animal
 
-#Classe Filha
-class Cachorro:
+# Classe Filha
+class Cachorro(Animal):
     def __init__(self, nome, sexo, idade, peso, nome_dono, raca):
-        super().__init__(nome, sexo, idade, peso, nome_dono)
+        super().__init__(nome, sexo, "Cachorro", idade, peso, nome_dono)
         self.raca = raca
 
-#   Método def str(características das classes)
-    def __str__(self):
-        return f"{self.nome} (tutor: {self.nome_dono})"
+    # Atributo privado
+    __raca = ""
 
+    # Getter e Setter com validação
+    @property
+    def raca(self):
+        return self.__raca
+
+    @raca.setter
+    def raca(self, valor):
+        if valor.strip() == "":
+            raise ValueError("A raça não pode ser vazia.")
+        self.__raca = valor
+
+    # Método str
+    def __str__(self):
+        return (
+            f"Nome: {self.nome} | "
+            f"Raça: {self.raca} | "
+            f"Tutor: {self.nome_dono}"
+        )
+
+    # Polimorfismo
     def emitir_som(self):
         return "Au Au!!"
 
-cachorro01 = Cachorro("", "Fêmea", 12, 9, "Vinícius Über", "Golden Retriever")
+
+cachorro01 = Cachorro(
+    "Rex",
+    "Macho",
+    12,
+    9,
+    "Vinícius Über",
+    "Golden Retriever"
+)
