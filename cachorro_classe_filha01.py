@@ -8,6 +8,7 @@ class Cachorro:
         super().__init__(nome, sexo, idade, peso, nome_dono)
         self.raca = raca
 
+#   Método def str(características das classes)
     def __str__(self):
         return f"{self.nome} (tutor: {self.nome_dono})"
 

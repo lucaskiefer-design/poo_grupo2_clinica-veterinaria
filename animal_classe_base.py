@@ -1,5 +1,6 @@
 ## ANIMAL
 
+#Criação da Classe Base
 class Animal:
     def __init__(self, nome, sexo, especie, idade, peso, nome_dono):
         self.nome = nome
@@ -9,10 +10,14 @@ class Animal:
         self.peso = peso
         self.nome_dono = nome_dono
 
+#Método def str(características das classes)
     def __str__(self):
         return f"{self.nome} (especie: {self.especie})"
 
     def emitir_som(self):
         pass
         return f"{self.nome} (especie: {self.especie})"
+        pass
+#Método (polimorfismo)
+    def emitir_som(self):
         pass
