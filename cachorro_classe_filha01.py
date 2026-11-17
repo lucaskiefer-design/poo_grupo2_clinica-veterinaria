@@ -1,8 +1,6 @@
 ## CACHORRO
 
 # Classe filha -- Cachorro
-
-# Importa a classe base Animal
 from animal_classe_base import Animal
 
 
@@ -13,10 +11,7 @@ class Cachorro(Animal):
         super().__init__(nome, sexo, "Cachorro", idade, peso, nome_dono)
         self.raca = raca
 
-    # Atributo privado
-    __raca = ""
-
-    # Getter e Setter com validação
+    # Getter e Setter de raça
     @property
     def raca(self):
         return self.__raca

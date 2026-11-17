@@ -1,11 +1,10 @@
 class Clinica:
     def __init__(self, nome, endereco):
-        self.__nome = ""
-        self.__endereco = ""
-
+        self.__animais = []
         self.nome = nome
         self.endereco = endereco
 
+    # Getter e Setter de nome
     @property
     def nome(self):
         return self.__nome
@@ -16,6 +15,7 @@ class Clinica:
             raise ValueError("O nome da clínica não pode ser vazio.")
         self.__nome = valor
 
+    # Getter e Setter de endereço
     @property
     def endereco(self):
         return self.__endereco
@@ -29,10 +29,14 @@ class Clinica:
     def __str__(self):
         return f"{self.nome} ({self.endereco})"
 
+    def adicionar_animal(self, animal):
+        self.__animais.append(animal)
 
-clinica01 = Clinica(
-    "Clínica do Jorge",
-    "Rua 25 de Julho, Vila Nova, Jaraguá do Sul"
-)
+    def listar_animais(self):
+        return self.__animais
 
-print(clinica01)
+    def buscar_por_nome(self, nome):
+        for animal in self.__animais:
+            if animal.nome.lower() == nome.lower():
+                return animal
+        return None

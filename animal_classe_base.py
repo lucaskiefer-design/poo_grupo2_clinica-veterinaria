@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 ## ANIMAL
 
-=======
 # Classe Base -- Animal
->>>>>>> cc7728fb27af9cd4b7a9d97468bda388cebefff0
 class Animal:
     def __init__(self, nome, sexo, especie, idade, peso, nome_dono):
         self.nome = nome
@@ -13,21 +10,6 @@ class Animal:
         self.peso = peso
         self.nome_dono = nome_dono
 
-<<<<<<< HEAD
-    def __str__(self):
-        return f"{self.nome} (especie: {self.especie})"
-
-    def emitir_som(self):
-        pass
-=======
-    # Atributos privados
-    __nome = ""
-    __sexo = ""
-    __especie = ""
-    __idade = 0
-    __peso = 0
-    __nome_dono = ""
-
     # Getter e Setter de nome
     @property
     def nome(self):
@@ -35,7 +17,6 @@ class Animal:
 
     @nome.setter
     def nome(self, valor):
-        # Validação para impedir que o nome fique vazio
         if valor.strip() == "":
             raise ValueError("O nome não pode ser vazio.")
         self.__nome = valor
@@ -94,6 +75,7 @@ class Animal:
         return (
             f"Nome: {self.nome} | "
             f"Espécie: {self.especie} | "
+            f"Sexo: {self.sexo} | "
             f"Idade: {self.idade} anos | "
             f"Peso: {self.peso} kg | "
             f"Dono: {self.nome_dono}"
@@ -101,14 +83,3 @@ class Animal:
 
     def emitir_som(self):
         pass
-        return f"{self.nome} (especie: {self.especie})"
-        pass
-
-#Método (polimorfismo)
-    # Método para polimorfismo
-    def emitir_som(self):
-        pass
-        raise NotImplementedError(
-            "Este método deve ser implementado pelas classes filhas."
-        )
->>>>>>> cc7728fb27af9cd4b7a9d97468bda388cebefff0

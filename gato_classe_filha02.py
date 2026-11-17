@@ -1,8 +1,6 @@
 ## GATO
 
 # Classe filha -- Gato
-
-# Importa a classe base Animal
 from animal_classe_base import Animal
 
 
@@ -13,10 +11,7 @@ class Gato(Animal):
         super().__init__(nome, sexo, "Gato", idade, peso, nome_dono)
         self.cor = cor
 
-    # Atributo privado
-    __cor = ""
-
-    # Getter e Setter
+    # Getter e Setter de cor
     @property
     def cor(self):
         return self.__cor
@@ -45,19 +40,3 @@ class Gato(Animal):
     # Método próprio
     def arranhar(self):
         return f"{self.nome} está a afiar as garras!"
-
-
-# Instância
-gato01 = Gato(
-    "Bob",
-    "Macho",
-    8,
-    6,
-    "Yara Borges",
-    "Laranja"
-)
-
-# Testes dos métodos da classe
-print(gato01)
-print(gato01.emitir_som())
-print(gato01.arranhar())
