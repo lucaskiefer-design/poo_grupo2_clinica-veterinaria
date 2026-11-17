@@ -1,0 +1,1 @@
+Este trabalho foi elaborado pelos alunos Lucas Bauer Kiefer, Gabriel Borges, Gustavo Diel Ramos Machado e Francisco da Silva Belinazo como parte das atividades da disciplina de Programação de Aplicativos do curso técnico em Desenvolvimento de Sistemas do SESI/SENAI, sob a orientação do professor Peterson.

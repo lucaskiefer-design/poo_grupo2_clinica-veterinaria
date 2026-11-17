@@ -1,13 +1,16 @@
 ## --- MAIN ---
 """Programa Principal - Menu Interativo Simplificado."""
 
-from clinica_classe_gerenciadora import Clinica       #Classe Gerenciadora
-from animal_classe_base import Animal         #Classe Base
-from cachorro_classe_filha01 import Cachorro     #Classe Filha
-from gato_classe_filha02 import Gato             #Classe Filha
+from clinica_classe_gerenciadora import Clinica
+from cachorro_classe_filha01 import Cachorro
+from gato_classe_filha02 import Gato
+
 
 def main():
-    clinica = Clinica("Pet Feliz")
+    clinica = Clinica(
+        "Pet Feliz",
+        "Rua 25 de Julho, Jaraguá do Sul"
+    )
 
     while True:
         print("\n--- CLÍNICA VETERINÁRIA ---")
@@ -25,35 +28,54 @@ def main():
 
                 if tipo == "1":
                     raca = input("Raça: ").strip()
-                    clinica.adicionar_animal(Cachorro(nome, sexo, idade, peso, dono, raca))
+                    clinica.adicionar_animal(
+                        Cachorro(nome, sexo, idade, peso, dono, raca)
+                    )
+
                 elif tipo == "2":
                     cor = input("Cor do pelo: ").strip()
-                    clinica.adicionar_animal(Gato(nome, sexo, idade, peso, dono, cor))
+                    clinica.adicionar_animal(
+                        Gato(nome, sexo, idade, peso, dono, cor)
+                    )
+
+                else:
+                    print("Tipo inválido.")
+                    continue
+
                 print("Cadastrado com sucesso!")
+
             except ValueError as erro:
                 print(f"Erro: {erro}")
 
         elif opcao == "2":
             print("\n--- Lista de Animais ---")
             animais = clinica.listar_animais()
+
             if not animais:
                 print("Nenhum animal cadastrado.")
-            for a in animais:
-                print(a)
+            else:
+                for animal in animais:
+                    print(animal)
 
         elif opcao == "3":
             nome = input("Nome para buscar: ").strip()
             animal = clinica.buscar_por_nome(nome)
-            print(animal if animal else "Não encontrado.")
+
+            if animal:
+                print(animal)
+            else:
+                print("Não encontrado.")
 
         elif opcao == "4":
             print("\n--- Teste de Polimorfismo ---")
-            for a in clinica.listar_animais():
-                print(f"{a.nome}: {a.emitir_som()}")
+
+            for animal in clinica.listar_animais():
+                print(f"{animal.nome}: {animal.emitir_som()}")
 
         elif opcao == "5":
             print("Saindo...")
             break
+
         else:
             print("Opção inválida.")
 
