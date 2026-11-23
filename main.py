@@ -1,4 +1,4 @@
-## --- MAIN ---
+9## --- MAIN ---
 """Programa Principal - Menu Interativo Simplificado."""
 
 from clinica_classe_gerenciadora import Clinica
@@ -78,7 +78,3 @@ def main():
 
         else:
             print("Opção inválida.")
-
-
-if __name__ == "__main__":
-    main()
