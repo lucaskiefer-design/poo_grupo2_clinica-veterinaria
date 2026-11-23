@@ -81,3 +81,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# --- Exemplo Cachorro ---
+# Tipo: 1
+# Nome: Thor
+# Sexo: Macho
+# Idade: 3
+# Peso: 14.5
+# Dono: Lucas
+# Raça: Vira-lata
+
+# --- Exemplo Gato ---
+# Tipo: 2
+# Nome: Luna
+# Sexo: Fêmea
+# Idade: 2
+# Peso: 4.2
+# Dono: Mariana
+# Cor do pelo: Cinza
+
