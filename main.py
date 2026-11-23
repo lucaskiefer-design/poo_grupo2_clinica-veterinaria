@@ -1,4 +1,4 @@
-9## --- MAIN ---
+## --- MAIN ---
 """Programa Principal - Menu Interativo Simplificado."""
 
 from clinica_classe_gerenciadora import Clinica
